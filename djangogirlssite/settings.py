@@ -75,22 +75,22 @@ WSGI_APPLICATION = 'djangogirlssite.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 # SQLite settings
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#    }
-#}
-
-# MySQL settings
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'OPTIONS': {
-            'read_default_file': 'C:/Data/Projects/Python/djangogirls/my.cnf',
-        },
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+# MySQL settings
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.mysql',
+#        'OPTIONS': {
+#            'read_default_file': 'C:/Data/Projects/Python/djangogirls/my.cnf',
+#        },
+#    }
+#}
 
 
 # Password validation
