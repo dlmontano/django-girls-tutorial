@@ -6,6 +6,10 @@
       <div class="date">
         {{ post.published_date }}
       </div>
+    {% else %}
+      <a class="btn btn-default" href="{% url 'post_publish' pk=post.pk %}">
+        Publish
+      </a>
     {% endif %}
 
     {% if user.is_authenticated %}
@@ -17,5 +21,9 @@
     <h1>{{ post.title }}</h1>
 
     <p>{{ post.text|linebreaksbr }}</p>
+
+    <p class="date">Created: {{ post.created_date }}</p>
+
+    <p class="author">Author: {{ post.author }}</p>
   </div>
 {% endblock %}

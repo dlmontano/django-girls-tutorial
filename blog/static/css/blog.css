@@ -22,6 +22,10 @@ h1, h2, h3, h4 {
     color: #828282;
 }
 
+.author {
+  color: #666666;
+}
+
 .save {
     float: right;
 }
