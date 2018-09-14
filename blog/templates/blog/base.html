@@ -1,7 +1,12 @@
 {% load static %}
+
+{% load i18n %}
+
+{% trans "Django Girls Blog" as title %}
+
 <html>
   <head>
-    <title>Django Girls blog</title>
+    <title>{{ title }}</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
@@ -20,10 +25,12 @@
         </a>
 
         <p class="top-menu">
-          Hello {{ user.username }}
+          {% trans "Hello" %} {{ user.username }}
 
           <small>
-            (<a href="{% url 'logout' %}">Log out</a>)
+            (<a href="{% url 'logout' %}">
+              {% trans "Log out" %}
+            </a>)
           </small>
         </p>
       {% else %}
@@ -33,7 +40,7 @@
       {% endif %}
 
       <h1>
-        <a href="/">Django Girls Blog</a>
+        <a href="/">{{ title }}</a>
       </h1>
     </div>
 

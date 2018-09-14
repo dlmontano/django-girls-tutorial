@@ -1,10 +1,12 @@
 {% extends 'blog/base.html' %}
 
+{% load i18n %}
+
 {% block content %}
   {% for post in posts %}
     <div class="post">
       <p class="date">
-        created: {{ post.created_date|date:'d-m-Y' }}
+        {% trans "created" %}: {{ post.created_date|date:'d-m-Y' }}
       </p>
 
       <h1>
